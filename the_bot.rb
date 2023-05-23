@@ -6,7 +6,7 @@ chatgpt = OpenAI::Client.new(access_token: ENV['OPENAI_TOKEN'])
 
 Telegram::Bot::Client.run(ENV['TELEGRAM_TOKEN']) do |bot|
   bot.listen do |message|
-    #p "user with id #{message.from.id} reached"
+    p "user with id #{message.from.id} reached"
 
     #return unless message.from.id == ENV['TELEGRAM_USER_ID']
 
