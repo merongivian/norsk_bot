@@ -1,13 +1,3 @@
-require 'bundler/inline'
-
-gemfile do
-  source 'https://rubygems.org'
-
-  gem 'telegram-bot-ruby'
-  gem 'ruby-openai'
-  gem 'dotenv'
-end
-
 require 'telegram/bot'
 require 'openai'
 require 'dotenv/load'
