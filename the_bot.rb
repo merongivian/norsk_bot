@@ -29,6 +29,6 @@ Telegram::Bot::Client.run(ENV['TELEGRAM_TOKEN']) do |bot|
       bot.api.send_message(chat_id: message.chat.id, text: chatgpt_response.dig("choices", 0, "message", "content"))
     end
   end
-rescue Telegram::Bot::Exceptions::ResponseError
-  p 'telegram response error'
+rescue Telegram::Bot::Exceptions::ResponseError => e
+  p "telegram response error #{e}"
 end
